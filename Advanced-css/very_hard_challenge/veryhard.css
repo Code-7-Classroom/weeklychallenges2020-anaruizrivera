@@ -1,0 +1,37 @@
+header {
+  font-size: 2em;
+  color: color;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: -1px 1px 0 #dfdff0, -2px 2px 0 #000;
+}
+header h1 {
+  text-align: center;
+}
+.newspaper_text::first-line {
+  color: red;
+  font-variant: small-caps;
+}
+.grid-column {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.grid__column {
+  border: solid;
+  background: gray;
+}
+.grid__column--gray {
+  background-color: gray;
+}
+.grid__box {
+  border: solid;
+  background: salmon;
+}
+.grid__box--salmon {
+  background-color: salmon;
+}
+.container_image {
+  height: 400px;
+  width: 300px;
+}

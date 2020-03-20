@@ -1,0 +1,21 @@
+#container {
+    border: solid 3px;
+    height: 800px;
+    width: 800px;
+   
+  }
+  .black, .white{
+    float:left;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    
+  }
+  .white{
+    background-color:white;
+  }
+  .black{
+    background-color: black;
+  }
+
+  

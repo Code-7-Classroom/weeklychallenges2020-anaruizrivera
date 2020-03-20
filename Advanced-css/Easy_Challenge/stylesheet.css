@@ -1,0 +1,22 @@
+.red{
+    
+height: 50px;
+width: 1000px;
+background-color: red;
+
+}
+.white{  
+height: 50px;
+width: 200%;
+background-color:white;
+}
+img{
+   position: absolute;
+   height: 380px;
+   
+   
+}
+div{
+  padding: 20px 20px 20px 20px;
+  border: solid black 20px;
+}

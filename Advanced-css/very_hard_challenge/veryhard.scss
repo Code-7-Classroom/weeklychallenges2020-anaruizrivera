@@ -1,0 +1,55 @@
+
+$color__primary--light: rgb(223, 223, 240);
+$color__primary:white;
+$color:black;
+$color__secondary:red;
+
+header{ 
+    font-size: 2em;
+    color: color;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: -1px 1px 0 $color__primary--light, -2px 2px 0 $color;
+h1 {
+    text-align: center;
+}
+}
+.newspaper_text::first-line{
+    color: $color__secondary;
+    font-variant:small-caps;
+}
+
+.grid-column{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+  .grid{
+       &__column{
+        border:solid;
+        background:gray;
+        &--gray{
+            background-color:gray;
+        }
+}
+} 
+ 
+
+.grid{
+    &__box{
+     border:solid;
+     background:salmon;
+     &--salmon{
+         background-color:salmon;
+     }
+}
+} 
+
+.container_image{
+    height: 400px;
+    width: 300px;
+    
+}
+   
+
