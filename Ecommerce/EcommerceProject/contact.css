@@ -33,7 +33,7 @@
 
 }
  #navbar {
-    background: #333;
+    background:grey;
     color: #fff;
     overflow: auto;
  }
@@ -48,6 +48,7 @@
     padding-top: 20px;
  }
  #navbar ul {
+   padding: 20px;
     float:right;
     list-style: none;
  }
@@ -63,16 +64,9 @@
  #navbar ul li a:hover,
  #navbar ul li a.current {
     background-color: #444;
-    color: #f7c08a;
+    color: skyblue;
  }
  
-
-
-
-
-
-
-
 
 
  .contact{
