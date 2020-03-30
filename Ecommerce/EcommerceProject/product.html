@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Our Products</title>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <img class="logo_image"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuQurigbMzrIAjhEJ_0DNSmHPeSsVSaZP1AxlmcF5fdrDl1YjI"
+                    alt="Logo_image">
+                <ul>
+                    <li><a class="" href="index.html">Home</a></li>
+                    <li><a class="current" href="product.html">About</a></li>
+                    <li><a class="" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Welcome </h1>
+            <p>Looking For Some Accessories</p>
+            <button>Information</button>
+        </div>
+    </div>
+
+    <!-- Filter -->
+    <form name="form" class="form-container" onsubmit="return validateForm()" action="/action_page.php" method="get">
+    </form>
+    <div class="gridfilter">
+        <p class="filters">Filter by:</p>
+        <select id="filterSelect" onchange="filterItems()">
+            <option value="default">All</option>
+            <option value="Best Selling">Best Selling</option>
+            <option value="Good">Good</option>
+        </select>
+    </div>
+    <div class="gridpricefilter">
+        <label for="filterSelect" class="filters">Filter Price:</label>
+        <select id="priceSelect" onchange="priceItems()">
+            <option value="default">All</option>
+            <option value="0-100">$0 - $100</option>
+            <option value="100-200">$100 - $200</option>
+            <option value="300-400">$300 - $400</option>
+            </select>
+        </div>
+
+    <main>
+
+        <section class="grid-container ">
+
+            <section class="product">
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_ba0360a8-72a4-4835-b080-fa96adbe5697_large.jpg?v=1571709519">
+                </figure>
+                <h3>QUAY EYEWEAR</h3>
+                <p> After Hours // Black Smoke</p>
+                <p>$300.00</p>
+                <p><span>Type:</span> <span class="item__type">Best Selling</span></p>
+                <p><span class="item__price">300-400</span></p>
+
+            </section>
+
+            <section class="product">
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_8ca3a2a0-f68b-422a-b89a-e54b6f157d20_large.jpg?v=1571709518">
+                </figure>
+                <h3>QUAY EYEWEAR</h3>
+                <p>After Hours // Orange Tort</p>
+                <p>$70.00</p>
+                <p><span>Type:</span> <span class="item__type">Best Selling</span></p>
+                <p><span class="item__price">0-100</span></p>
+
+
+            </section>
+
+            <section class="product">
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/BE894683-9B8E-4A4D-A205-3BF8F878D4F9_large.jpg?v=1582767395">
+                </figure>
+                <h3>QUAY EYEWEAR</h3>
+                <p>After Hours // Shiny Black/Smoke</p>
+                <p>$200.99</p>
+                <p><span>Type:</span> <span class="item__type">Best Selling</span></p>
+                <p><span class="item__price">200-300</span></p>
+            </section>
+
+            <section class="product">
+
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/41D1EACB-611D-4D3A-8C5D-4BA7FE8FD6D3_large.jpg?v=1582767898">
+                </figure>
+                <h3>QUAY EYEWEAR</h3>
+                <p>After Hours // Tort Brown/Brown Fade</p>
+                <p>$89.00</p>
+                <p><span>Type:</span> <span class="item__type">Good</span></p>
+                <p><span class="item__price">0-100</span></p>
+
+            </section>
+
+            <section class="product">
+
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_68e83e5c-68c5-4384-b1c4-8c850e6309e0_large.jpg?v=1571709559">
+                </figure>
+                <h3>FOXWOOD</h3>
+                <p>Jimbaran Bay Dress // Bronze</p>
+                <p>$210.95</p>
+                <p><span>Type:</span> <span class="item__type">Good</span></p>
+                <p><span class="item__price">200-300</span></p>
+
+            </section>
+
+            <section class="product">
+
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/3DE9E395-9962-4371-A7CB-9DBE80B6245D_1024x1024.jpg?v=1584746274">
+                </figure>
+                <h3>COOPER ST</h3>
+                <p>Mallorca Long Sleeve Midi Dress</p>
+                <p>$234.00</p>
+                <p><span>Type:</span> <span class="item__type">Good</span></p>
+                <p><span class="item__price">200-300</span></p>
+            </section>
+
+            <section class="product">
+
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/0A2718A0-10C0-4A3C-9BF7-25B03B942BE4_large.jpg?v=1584140046">
+                </figure>
+                <h3>Black Dress</h3>
+                <p>Roar Dress // Navy With White Spot</p>
+                <p>$300.00</p>
+                <p><span>Type:</span> <span class="item__type">Good</span></p>
+                <p><span class="item__price">300-500</span></p>
+
+            </section>
+
+
+            <section class="product">
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/BB7D066F-4D44-477E-A16B-6658B304187E_large.jpg?v=1582244301">
+                </figure>
+                <h3>NYNE</h3>
+                <p>Distant Long Sleeve Dress</p>
+                <p>$249.00</p>
+                <p><span>Type:</span> <span class="item__type">Good</span></p>
+                <p><span class="item__price">200-300</span></p>
+
+            </section>
+
+            <section class="product">
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_5ef86f26-7e84-40f9-bb27-109229e1b115_large.jpg?v=1575416763">
+                </figure>
+                <h3>COMMONERS ALIKE</h3>
+                <p>- Crafted from 100% slub cotton jersey. Rib neckline.</p>
+                <p>$69.00</p>
+                <p><span>Type:</span> <span class="item__type">Good</span></p>
+                <p><span class="item__price">0-100</span></p>
+
+            </section>
+
+            <section class="product">
+
+                <figure>
+                    <img class="grid-img" alt="image of accessories"
+                        src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_0cb2db7b-2ac1-4777-bc32-579b556fbc7d_1024x1024.jpg?v=1575416618">
+                </figure>
+                <h3>COMMONERS ALIKE</h3>
+                <p>- Crafted from 100% slub cotton jersey. Rib neckline, oversized fit w/ drop shoulder seams.</p>
+                <p>$69.00</p>
+                <p><span>Type:</span> <span class="item__type">Good</span></p>
+                <p><span class="item__price">0-100</span></p>
+        </section>
+
+        <section class="product">
+
+            <figure>
+                <img class="grid-img" alt="image of accessories"
+                    src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_4892fa8a-aa18-475b-9ead-b6a265fbc413_1024x1024.jpg?v=1578882152">
+            </figure>
+            <h3>Curve Jacket // Beige</h3>
+            <p>Rains’ Curve Jacket is a classic yet practical women’s rain jacket inspired by the timeless
+                Trench Coat. </p>
+            <p>$220.00</p>
+            <p><span>Type:</span> <span class="item__type">Good</span></p>
+            <p><span class="item__price">200-300</span></p>
+        </section>
+
+        <section class="product">
+
+            <figure>
+                <img class="grid-img" alt="image of accessories"
+                    src="https://cdn.shopify.com/s/files/1/1132/3440/products/BC83D6AA-E091-4DFF-93EF-E7CF9CDA4632_large.jpeg?v=1575353420">
+            </figure>
+            <h3>Geneva V Neck Top</h3>
+            <p>Long sleeved v necked top.</p>
+            <p>$200.90</p>
+            <p><span>Type:</span> <span class="item__type">Best Selling</span></p>
+            <p><span class="item__price">100-200</span></p>
+        </section>
+
+
+
+        </section>
+
+    </main>
+    <footer id="footer">
+        <p>| ANA RUIZ RIVERA | &copy; 2020, All Rights Reserved</p>
+        <a href="https://www.facebook.com/profile.php?id=100009827972169&ref=bookmarks" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/explore" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/darwin02504/" class="fa fa-instagram"></a>
+        <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+    </footer>
+
+    <script src="product.js"></script>
+</body>
+
+</html>

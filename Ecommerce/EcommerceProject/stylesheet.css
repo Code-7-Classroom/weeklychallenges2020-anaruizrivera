@@ -1,0 +1,274 @@
+/* Css Reset */
+ 
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ }
+ /* Main Styling */
+  
+ html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+ }
+ a {
+    color: #333;
+    text-decoration: none;
+ }
+  h1, h2, h3 {
+    padding-bottom: 20px;
+    text-align: center;
+ } 
+ 
+ 
+ 
+
+ /* Navbar */
+.logo_image{
+    float: left;
+   height: 100px;
+   width: 90px;
+   margin: 10px;
+   border-radius: 20px;
+
+}
+ #navbar {
+    background: #333;
+    color: #fff;
+    overflow: auto;
+ }
+ #navbar a {
+    color: #fff;
+ }
+ #navbar h1 {
+    color:#fff;
+ }
+ #navbar h1 {
+    float: left;
+    padding-top: 20px;
+ }
+ #navbar ul {
+    float:right;
+    list-style: none;
+ }
+ #navbar ul li{
+    float: left;
+ }
+ #navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  
+ }
+ #navbar ul li a:hover,
+ #navbar ul li a.current {
+    background-color: #444;
+    color: #f7c08a;
+ }
+ 
+
+ /* SLIDER */
+ /* Parent wrapper to carousel. */
+.carousel-wrapper {
+   overflow: hidden;
+   width: 95%;
+   margin: auto;
+ }
+ 
+ .carousel-wrapper * {
+   box-sizing: border-box;
+ }
+ 
+ .carousel {
+   transform-style: preserve-3d;
+ }
+ 
+ /* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+ .carousel__photo {
+   opacity: 0;
+   position: absolute;
+   top:0;
+   width: 100%;
+   margin: auto;
+   padding: 1rem 4rem;
+   z-index: 100;
+   transition: transform .5s, opacity .5s, z-index .5s;
+ }
+ 
+ /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+ .carousel__photo.initial,
+ .carousel__photo.active {
+   opacity: 1;
+   position: relative;
+   z-index: 900;
+ }
+ 
+ /* Set 'z-index' to sit behind our '.active' item. */
+ .carousel__photo.prev,
+ .carousel__photo.next {
+   z-index: 800;
+ }
+ 
+ 
+ .carousel__photo.prev {
+   transform: translateX(-100%);
+ }
+ 
+
+ .carousel__photo.next {
+   transform: translateX(100%);
+ }
+ 
+ 
+ .carousel__button--prev,
+ .carousel__button--next {
+   position: absolute;
+   top:50%;
+   width: 3rem;
+   height: 3rem;
+   background-color: #FFF;
+   transform: translateY(-50%);
+   border-radius: 50%;
+   cursor: pointer; 
+   z-index: 1001; /* Sit on top of everything */
+   border:1px solid black;
+ 
+ }
+ 
+ .carousel__button--prev {
+   left:0;
+ }
+ 
+ .carousel__button--next {
+   right:0;
+ }
+ 
+ /* Use pseudo elements to insert arrows inside of navigation buttons */
+ .carousel__button--prev::after,
+ .carousel__button--next::after {
+   content: " ";
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   top: 50%;
+   left: 54%;
+   border-right: 2px solid black;
+   border-bottom: 2px solid black;
+   transform: translate(-50%, -50%) rotate(135deg);
+ }
+ 
+ .carousel__button--next::after {
+   left: 47%;
+   transform: translate(-50%, -50%) rotate(-45deg);
+ }
+
+ 
+
+
+/* /////////////////////////////////////
+  Container Accesories
+///////////////////////////////////////*/
+.info_article{
+  border: 15px solid black;
+  padding: 40px 40px 40px 40px;
+}
+
+.container_information{
+  display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    grid-row: auto auto auto;
+    padding:10px 10px 10px 10px;
+    margin: 50px;
+}
+
+.container_image{
+  height: 200px;
+  width: 200px;
+}
+.small_sections{
+  display: inline-block;
+  margin:10px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  width: 500px;
+  padding: 20px;
+
+}
+button{
+  background-color:skyblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Last Images  */
+.last_images_product{
+  display:flex;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+}
+/* Footer */
+ 
+#footer{
+  background: grey;
+  color: black;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+
+/* Social Media Links */
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+ .fa:hover {
+  opacity: 0.7;
+}
+ .fa-facebook {
+  color: skyblue;
+}
+
+.fa-twitter {
+  color: skyblue;
+}
+
+.fa-youtube {
+  color: skyblue;
+}
+ .fa-instagram {
+  color: skyblue;
+}
+
+
+
+@media screen and (max-width: 789px) {
+  .container_information {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+      width: 789px;
+      height: auto;
+      float: left;
+  }
+}
+@media screen and (max-width: 789px){
+  .last_images_product{
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px;
+      width: 789px;
+      height: auto;
+}
+}
