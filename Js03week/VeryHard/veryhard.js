@@ -5,44 +5,53 @@ function Person(name, job, age) {
     this.age = age;
 }
 //2
-Person.prototype.exercise = function () {
+Person.prototype.exercise = function() {
     return "Running is fun! - said no one ever";
 }
 //3
-Person.prototype.fetchJob = function () {
-    return this.name + ' is a ' + this.job
+Person.prototype.fetchJob = function() {
+    return this.name + ' is a ' + this.job;
 }
 //4
 function Programmer(name, job, age, languages) {
     Person.call(this, name, job, age);
-    this.language = languages;
+    this.language = [languages];
     this.busy = true;
 }
 //5
-Programmer.prototype.completeTask = function () {
+Programmer.prototype.completeTask = function() {
     this.busy = false;
 }
-Programmer.prototype.acceptNewTask = function () {
+Programmer.prototype.acceptNewTask = function() {
     this.busy = true;
 }
 //6
-Programmer.prototype.offerNewTask = function () {
+Programmer.prototype.offerNewTask = function() {
     if (this.busy) {
-        console.log(' cant accept any new tasks right now.');
+        console.log(this.name +' cant accept any new tasks right now.');
     } else {
-        console.log(' would love to take on a new responsibility." if the programmer is not busy.')
+        console.log(' would love to take on a new responsibility.')
 
     }
 }
 //7
-Programmer.prototype.learnLanguage = function () {
-    this.listLanguages = [];
+Programmer.prototype.listLanguage = function() {
+  console.log(this.language);
+}
+
+Programmer.prototype.learnLanguage= function(program){
+    return this.language.push(program);
 }
 //8
-const me = new Person("Ana", "RoadToHire Student", 17)
+const me = new Person("Ana", "RoadToHire Student", 10)
 console.log(me.fetchJob());
-const fatima1 = new Programmer("Fatima", "RoadtoHire Student", 17, ["HTML", "CSS", "JS"]);
+const fatima1 = new Programmer("Fatima", "RoadtoHire Student", 17, "HTML");
 console.log(fatima1);
+fatima1.listLanguage();
+fatima1.learnLanguage("ruby");
+fatima1.listLanguage();
+fatima1.offerNewTask();
+
 
 
 
