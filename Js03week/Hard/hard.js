@@ -12,15 +12,20 @@
 // to their ssn.
 
 
-function pii(name, ssn) {
-    let _name = name;
-    let _ssn = ssn;
-    return {
-        getName() {
-            return _name;
+function personProperty(){
+  
+    return function(){
+        var pii = {
+            name: "Anita",
+            ssn: 82330943
+        };
+        
+            return pii.name;
         }
 
-    }
+
 }
-let me =pii("Ana",887);
-console.log(me.getName());
+var onlyName = personProperty();
+console.log(onlyName());
+
+
