@@ -1,17 +1,17 @@
 //How is information store in an Object
-//
+// Key Value Pairs or Key Values
 
 
 //1
 const me= {
     name:"Ana",
-    lastName:"Ruiz"
+    sayHello: (name) => {
+        console.log("Hello "+ this.name);
+    }
+    
 }
-console.log(me);
-console.log(me.name);
+me.sayHello(me.name);
 
-//2
-const sayHello= (name) => {
-    console.log("Hello "+ name);
-}
-sayHello("Ana");
+// console.log(me);
+// console.log(me.name);
+

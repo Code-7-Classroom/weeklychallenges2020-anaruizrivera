@@ -1,0 +1,26 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+    
+    }
+    /* #btn-section{
+        
+        height: 100px;
+        width: 100px;
+
+    } */
+    
+    /* button {
+    padding: 40px;
+        cursor: pointer;
+    }
+     */
+     .button-red {
+        background-color: red;
+       
+
+    
+    .button-white {
+        background-color: white;
+    }
