@@ -8,8 +8,8 @@ Check the Assigned Weekly Challenges Repo under 10-modernjs/challenges/hard for 
 
 
 
-let redButton = document.querySelector('.button-red');
-let whiteButton = document.querySelector('.button-white');
+let redButton = document.querySelector('.btn-red');
+let whiteButton = document.querySelector('.btn-white');
 
 redButton.addEventListener('click', () => {
     updateTheBackground('red');
@@ -20,6 +20,6 @@ whiteButton.addEventListener('click', () => {
     updateTheBackground('white');
 });
 
-window.updateTheBackground =  function(className) {
+window.updateTheBackground = function (className) {
     document.body.classList = className;
 }

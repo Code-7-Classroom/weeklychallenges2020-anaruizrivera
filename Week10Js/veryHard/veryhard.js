@@ -6,22 +6,9 @@ Output: “b”
 Input: “this hat is the greatest!”  Output: “g”
 Input: “what a wonderful day it has been!”  Output: “o”*/
 
-
-
-
-// // const str = (string ) =>{
-//     let word ="ana this hat is the greatest";
-// for(const i=0; i < string.lenght; i++){
-//   if( word.indexOf(str.charAt(i))==word.lastIndexOf(word.chartAt(i))){
-//      //return string;
-
-//   }
-// }
-// //}
-// str();
-// console.log(str);
-
-const input = (string) => {
+//function that takes in a string
+const strInput = (string) => {
+    //loop that goes throug every character and checks
     for(let i = 0; i < string.length; i++){
         let a = string.charAt(i)
 
@@ -30,4 +17,4 @@ const input = (string) => {
         }
     }
 }
-console.log(input('what a wonderful day it has been!'));
+console.log(strInput('this hat is the greatest!'));
