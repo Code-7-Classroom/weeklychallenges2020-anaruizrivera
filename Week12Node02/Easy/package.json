@@ -1,0 +1,21 @@
+{
+  "name": "@anaruizrivera/easy",
+  "version": "1.1.1",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Ana",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anaruizrivera/test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anaruizrivera/test/issues"
+  },
+  "homepage": "https://github.com/anaruizrivera/test#readme"
+}
