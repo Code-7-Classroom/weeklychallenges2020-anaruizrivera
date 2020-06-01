@@ -1,0 +1,32 @@
+USE challenges_mysql;
+
+-- Created movies table
+
+CREATE TABLE movies(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title VARCHAR(255),
+release_date DATE, -- '2012-12-31'
+rating VARCHAR(255)
+);
+
+-- Adding my top 10 movies to the table
+
+INSERT INTO movies(title, release_date, rating)
+VALUES('Bird Box', '2018-12-14', 'R'),
+('Resident Evil: Retribution', '2012-09-14', 'R'),
+('Breaking Dawn', '2011-11-18', 'PG-13'),
+('Diverget', '2014-03-21', 'PG-13'),
+('What Happened to Monday', '2017-08-30', 'NR'),
+('Time Trap', '2018-11-02', 'NR'),
+('Frozen II', '2019-11-22', 'PG'),
+('Toy Story IV', '2019-06-21', 'G'),
+('Code 8', '2019-12-13', 'TV-MA'),
+('Resident Evil: The Final Chapter', '2016-12-13', 'R');
+
+-- Query that pulls all movies, in order of release date, where the title includes the letter “s”.
+
+SELECT * FROM movies -- Pulls all movies
+WHERE title LIKE '%s%' -- Checks to see if title has the letter 's'
+ORDER BY release_date ASC; -- Order movies by release date from oldest to latest.
+
+

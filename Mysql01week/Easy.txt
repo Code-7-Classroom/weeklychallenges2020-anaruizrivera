@@ -1,0 +1,38 @@
+DROP DATABASE challenges_mysql;
+
+USE challenges_mysql;
+
+CREATE TABLE books(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	title VARCHAR(255),
+    publish_date INT,
+    author VARCHAR(255)
+);
+
+INSERT INTO books(title, publish_date, author)
+VALUES('To touch a wild dolphin', 2001, 'Rachel Smolker'),
+('Twilight', 2005, 'Stephenie Meyer'),
+('How to Win Friends and Influence People', 1936, 'Dale Carnegie'),
+('Eclipse', 2007, 'Stephenie Meyer'),
+('Breaking Dawn', 2008, 'Stephenie Meyer');
+
+-- QUERY TO ADD IN TWO MORE BOOKS
+
+INSERT INTO books(title, publish_date, author)
+VALUES('New Moon', 2006, 'Stephenie Meyer'),
+('Midnight Sun', 2020, 'Stephenie Meyer');
+
+SELECT * FROM books;
+
+-- DELETE THE OLDEST BOOK
+
+DELETE FROM books
+WHERE id = 3;
+
+-- Query that gives the sum of all books!!
+
+SELECT
+    COUNT(title) Total_Books
+FROM
+    books;
+

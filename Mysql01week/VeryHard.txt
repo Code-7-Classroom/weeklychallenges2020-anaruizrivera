@@ -1,0 +1,86 @@
+-- Very Hard: 
+-- 1. Copy the table from your Very Easy Challenge 
+-- 2. Write a query to add in three cars at once 
+-- 3. Write a query to add in prices and colors for each of these cars 
+-- 4. Write a query to put the Make and Model together in one column 
+-- 5. Create a new query that adds an additional column to the results to show how many cars have the same Make.
+
+-- Very Easy Challenge Copy
+
+
+USE challenges_mysql;
+
+CREATE TABLE carsCopy(
+id INT AUTO_INCREMENT PRIMARY KEY,
+make VARCHAR(255),
+model VARCHAR(255),
+year INT
+);
+
+INSERT INTO carsCopy (make, model, year)
+VALUES 
+('Toyota', 'Camry', 2018),
+('Honda', 'Civic', 2019),
+('Nissan', 'Altima', 2020);
+
+-- Add in two more cars
+
+INSERT INTO carsCopy (make, model, year)
+VALUES 
+('Tesla', 'Model S', 2020),
+('Ferrari', 'Portofino', 2020);
+
+SELECT * FROM carsCopy;
+
+
+-- 2. Write a query to add in three cars at once 
+
+INSERT INTO carsCopy (make, model, year)
+VALUES 
+('Ford', 'Mustang', 2015),
+('Chevrolet', 'Camaro', 2016),
+('Jeep', 'Cherokee', 2014);
+
+
+-- 3. Write a query to add in prices and colors for each of these cars 
+
+ALTER TABLE carsCopy
+ADD COLUMN color VARCHAR(30) NOT NULL,
+ADD COLUMN price INT NOT NULL;
+
+UPDATE carsCopy SET color ='White', price= 24380 WHERE id = 1;
+UPDATE carsCopy SET color ='Crystal Black', price= 19550 WHERE id = 2;
+UPDATE carsCopy SET color ='Glacier White', price= 24100 WHERE id = 3;
+UPDATE carsCopy SET color ='Deep Blue', price= 79990 WHERE id = 4;
+UPDATE carsCopy SET color ='Blu Scozia', price= 215000 WHERE id = 5;
+UPDATE carsCopy SET color ='Race Red', price= 24425 WHERE id = 6;
+UPDATE carsCopy SET color ='Hyper Blue', price= 267000 WHERE id = 7;
+UPDATE carsCopy SET color ='Billet Silver', price= 14700 WHERE id = 8;
+
+SELECT * FROM carsCopy;
+
+
+
+-- 4. Write a query to put the Make and Model together in one column
+
+SELECT 
+    CONCAT_WS(', ', make, model) AS `Car_Type`
+FROM
+    carsCopy;
+    
+    
+    
+-- 5. Create a new query that adds an additional column to the results to show how many cars have the same Make.
+
+UPDATE carsCopy
+SET make = 'Ford'
+WHERE id = 7;
+
+SELECT 
+    make, 
+    COUNT(make)
+FROM
+    carsCopy
+GROUP BY make
+HAVING COUNT(make) > 1;
+

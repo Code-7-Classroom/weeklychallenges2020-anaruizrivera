@@ -1,0 +1,29 @@
+-- Very Easy Challenge
+
+DROP DATABASE challenges_mysql;
+
+CREATE DATABASE challenges_mysql;
+
+USE challenges_mysql;
+
+
+CREATE TABLE cars(
+make VARCHAR(255),
+model VARCHAR(255),
+year INT
+);
+
+INSERT INTO cars (make, model, year)
+VALUES 
+('Toyota', 'Camry', 2018),
+('Honda', 'Civic', 2019),
+('Nissan', 'Altima', 2020);
+
+-- Add in two more cars
+
+INSERT INTO cars (make, model, year)
+VALUES 
+('Tesla', 'Model S', 2020),
+('Ferrari', 'Portofino', 2020);
+
+SELECT * FROM cars;

@@ -1,0 +1,91 @@
+-- 1. Hard: Make a copy of your Medium Challenge 
+-- 2. Write out the queries that would add the director’s First Name and Last Name into two separate columns. 
+-- 3. Create a query that puts the names together. 
+-- 4. Create a query to put the list in alphabetical order by the last name from A-Z 
+-- 5. After you order the list, remove the Movies where the Last Name ends with ”R-Z” 
+-- 6. Write a query where the first three appear
+
+
+USE challenges_mysql;
+
+-- Created movies table
+
+CREATE TABLE moviesCopy(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title VARCHAR(255),
+release_date DATE, -- '2012-12-31'
+rating VARCHAR(255)
+);
+
+-- Adding my top 10 movies to the table
+
+INSERT INTO moviesCopy(title, release_date, rating)
+VALUES('Bird Box', '2018-12-14', 'R'),
+('Resident Evil: Retribution', '2012-09-14', 'R'),
+('Breaking Dawn', '2011-11-18', 'PG-13'),
+('Diverget', '2014-03-21', 'PG-13'),
+('What Happened to Monday', '2017-08-30', 'NR'),
+('Time Trap', '2018-11-02', 'NR'),
+('Frozen II', '2019-11-22', 'PG'),
+('Toy Story IV', '2019-06-21', 'G'),
+('Code 8', '2019-12-13', 'TV-MA'),
+('Resident Evil: The Final Chapter', '2016-12-13', 'R');
+
+-- Query that pulls all movies, in order of release date, where the title includes the letter “s”.
+
+SELECT * FROM moviesCopy -- Pulls all movies
+WHERE title LIKE '%s%' -- Checks to see if title has the letter 's'
+ORDER BY release_date ASC; -- Order movies by release date from oldest to latest.
+
+-- 2. Write out the queries that would add the director’s First Name and Last Name into two separate columns. 
+
+ALTER TABLE moviesCopy
+ADD COLUMN director_FirstName VARCHAR(255) NOT NULL,
+ADD COLUMN director_LastName VARCHAR(255) NOT NULL;
+
+UPDATE moviesCopy SET director_FirstName ='Susanne', director_LastName='Bier' WHERE id = 1;
+UPDATE moviesCopy SET director_FirstName ='Paul W.', director_LastName='S. Anderson' WHERE id = 2;
+UPDATE moviesCopy SET director_FirstName ='Bill', director_LastName='Condon' WHERE id = 3;
+UPDATE moviesCopy SET director_FirstName ='Neil', director_LastName='Burger' WHERE id = 4;
+UPDATE moviesCopy SET director_FirstName ='Tommy', director_LastName='Wirkola' WHERE id = 5;
+UPDATE moviesCopy SET director_FirstName ='Ben', director_LastName='Foster' WHERE id = 6;
+UPDATE moviesCopy SET director_FirstName ='Jennifer', director_LastName='Lee' WHERE id = 7;
+UPDATE moviesCopy SET director_FirstName ='Josh', director_LastName='Cooley' WHERE id = 8;
+UPDATE moviesCopy SET director_FirstName ='Jeff', director_LastName='Chan' WHERE id = 9;
+UPDATE moviesCopy SET director_FirstName ='Paul W.', director_LastName='S. Anderson' WHERE id = 10;
+
+
+
+-- 3. Create a query that puts the names together. 
+
+SELECT 
+    CONCAT_WS(', ', director_FirstName, director_LastName) AS `Full name`
+FROM
+    moviesCopy;
+    
+
+-- 4. Create a query to put the list in alphabetical order by the last name from A-Z 
+
+SELECT * FROM moviesCopy
+ORDER BY director_LastName;
+
+
+-- 5. After you order the list, remove the Movies where the Last Name ends with ”R-Z”
+
+DELETE FROM moviesCopy WHERE director_LastName LIKE '%r';
+DELETE FROM moviesCopy WHERE director_LastName LIKE '%y';
+
+
+-- 6. Write a query where the first three appear 
+
+SELECT * FROM moviesCopy
+WHERE id
+LIMIT 3;
+
+
+-- Final Check
+
+SELECT * FROM moviesCopy;
+
+
+
